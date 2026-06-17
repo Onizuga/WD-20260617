@@ -57,15 +57,61 @@ Codex 依赖 Node.js 运行。
    `npm --version`
    如果显示版本号（如 v22.16.0），说明安装成功
 
+**macOS 用户：**
+
+**方法一（推荐）：使用 Homebrew 安装**
+1. 打开「终端」（在启动台搜索「终端」）
+2. 如果尚未安装 Homebrew，使用中科大镜像安装：
+   ```
+   /bin/bash -c "$(curl -fsSL https://mirrors.ustc.edu.cn/misc/brew-install.sh)"
+   ```
+3. 安装 Node.js：
+   ```
+   brew install node
+   ```
+4. 验证安装：
+   ```
+   node --version
+   npm --version
+   ```
+
+**方法二：从官网下载 pkg 安装包**
+1. 访问 https://nodejs.org/ 下载 macOS .pkg（LTS 版本）
+2. 双击安装，按提示完成
+3. 打开终端验证：`node --version`
+
+> 提示：Apple Silicon（M1/M2/M3/M4）芯片可以正常使用上述方法
+
 **国内镜像加速（推荐）：**
 如果 npm 下载包太慢，配置国内镜像源：
 `npm config set registry https://registry.npmmirror.com`
 
 ### 2.2 安装 Git（可选但有帮助）
 
+**Windows 用户：**
 1. 访问 https://git-scm.com/download/win
 2. 下载安装包，一路默认安装
-3. 验证安装：打开终端输入 `git --version`
+3. 验证安装：`git --version`
+
+**macOS 用户：**
+
+**方法一（推荐）：使用 Homebrew 安装**
+```
+brew install git
+```
+
+**方法二：使用 Xcode Command Line Tools（自带 Git）**
+1. 打开终端
+2. 运行：
+   ```
+   xcode-select --install
+   ```
+3. 在弹出的窗口中点击「安装」
+4. 验证：`git --version`
+
+**方法三：从官网下载安装包**
+1. 访问 https://git-scm.com/download/mac
+2. 下载 .dmg 文件并安装
 
 ### 2.3 安装 curl（用于调用 API）
 
