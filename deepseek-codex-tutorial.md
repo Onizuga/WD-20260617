@@ -62,9 +62,25 @@ Codex 依赖 Node.js 运行。
 **方法一（推荐）：使用 Homebrew 安装**
 1. 打开「终端」（在启动台搜索「终端」）
 2. 如果尚未安装 Homebrew，使用中科大镜像安装：
+
+   > ⚠️ **重要：** macOS 默认 shell 是 zsh，直接粘贴命令可能会报 `bad pattern` 错误。请**逐行手动输入**以下命令，不要复制粘贴：
+
+   第一步（切换到 bash 并安装 Homebrew）：
    ```
-   /bin/bash -c "$(curl -fsSL https://mirrors.ustc.edu.cn/misc/brew-install.sh)"
+   bash -c "$(curl -fsSL https://mirrors.ustc.edu.cn/misc/brew-install.sh)"
    ```
+
+   如果上面报错，尝试改用官方源（可能较慢但更稳定）：
+   ```
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+
+   安装完成后，终端会提示你将 Homebrew 加入 PATH（一般执行下面两行）：
+   ```
+   echo 'eval "$(/opt/homebrew/bin/brew env)"' >> ~/.zprofile
+   eval "$(/opt/homebrew/bin/brew env)"
+   ```
+
 3. 安装 Node.js：
    ```
    brew install node
